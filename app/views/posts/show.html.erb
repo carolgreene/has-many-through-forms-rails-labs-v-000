@@ -21,6 +21,6 @@ Comments:
 Users:
 <p>
   <% @post.users.all.each do |user| %>
-  <%= user.username %><br>
+  <%= link_to user.username, user_path(user) %><br>
   <% end %>
 </p>
