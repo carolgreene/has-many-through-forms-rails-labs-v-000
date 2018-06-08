@@ -13,4 +13,5 @@ class Post < ActiveRecord::Base
         end
       end
     end
-  end 
+  end
+end 
