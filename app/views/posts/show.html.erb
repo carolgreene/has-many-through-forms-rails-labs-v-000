@@ -10,3 +10,10 @@ Categories:
 <%= category.name %><br>
 <% end %>
 </p>
+
+Comments:
+<p>
+  <% @post.comments.all.each do |comment| %>
+  <%= comment.content %><br>
+  <% end %>
+</p>
