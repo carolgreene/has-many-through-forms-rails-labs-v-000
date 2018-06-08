@@ -14,7 +14,7 @@ Categories:
 Comments:
 <p>
   <% @post.comments.all.each do |comment| %>
-  <%= comment.content %><br>
+  <%= comment.username %> says: <%= comment.content %><br>
   <% end %>
 </p>
 
