@@ -11,17 +11,10 @@
 <%= f.text_area :content %><br>
 </p>
 
-
 <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) %>
 <% #Line above will generate a checkbox named post[category_ids][] for each category in
 #Category.all. It will use the :id as the value of the checkbox and
 #it will use the :name method as the label for the checkbox %>
-
-<!--<% Category.all.each do |c| %>
-<p>
-  <label for="category_id_<%= c.id %>"><%= c.name %></label>
-    <input type="checkbox" name="post[category_ids][]" value="<%= c.id %>" id="category_id_<%= c.id %>">
-  <% end %>-->
 
 New Category:
 <%= f.fields_for :categories, Category.new do |category_builder| %>
@@ -30,6 +23,8 @@ New Category:
   <!--<input type="text" id="post_categories_attributes_0_name" name="post[categories_attributes][0][name]"/>-->
 </p>
 
-<%= f.submit %>
 
+
+
+<%= f.submit %>
 <% end %>
