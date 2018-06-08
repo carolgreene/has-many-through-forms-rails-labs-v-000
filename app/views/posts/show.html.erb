@@ -29,6 +29,7 @@ Users:
 <%= form_for @post.comments.build do |f| %>
 <%= f.hidden_field :post_id %>
 <%= f.collection_select :user_id, User.all, :id, :username %><br>
-
+<% end %>
 
 <%= f.submit %>
+<% end %>
