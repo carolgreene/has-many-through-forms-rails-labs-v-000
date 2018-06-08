@@ -1,12 +1,12 @@
 <h2>Post show page</h2>
 <p>
-<%= @post.title %>
-<%= @post.content %>
+Title:<%= @post.title %><br>
+Content:<%= @post.content %>
 </p>
 
 Categories:
 <p>
 <% @post.categories.all.each do |category| %>
-<%= category.name %>
+<%= category.name %><br>
 <% end %>
 </p>
