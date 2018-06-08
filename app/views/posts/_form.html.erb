@@ -13,6 +13,6 @@ New Category:<br>
 <%= f.fields_for :categories, Category.new do |category_builder| %>
 <%= category_builder.text_field :name %>
 <% end %>
-
+<br>
 <%= f.submit %>
 <% end %>
