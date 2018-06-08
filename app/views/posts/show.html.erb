@@ -20,7 +20,7 @@ Comments:
 
 Users:
 <p>
-  <% @post.users.uniq.all.each do |user| %>
+  <% @post.users.all.uniq.each do |user| %>
   <%= link_to user.username, user_path(user) %><br>
   <% end %>
 </p>
