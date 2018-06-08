@@ -17,3 +17,10 @@ Comments:
   <%= comment.content %><br>
   <% end %>
 </p>
+
+Users:
+<p>
+  <% @post.users.all.each do |user| %>
+  <%= user.username %><br>
+  <% end %> 
+</p>
