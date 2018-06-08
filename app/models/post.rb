@@ -10,9 +10,9 @@ class Post < ActiveRecord::Base
         category = Category.find_or_create_by(name: category_attributes[:name])
         if !self.categories.include?(category)
           self.post_categories.build(:category => category)
-        end 
-      end 
-    end 
-    
+        end
+      end
+    end
+
 
 end
