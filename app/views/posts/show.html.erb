@@ -6,21 +6,21 @@ Content:<%= @post.content %>
 
 Categories:
 <p>
-<% @post.categories.all.each do |category| %>
+<% @post.categories.each do |category| %>
 <%= category.name %><br>
 <% end %>
 </p>
 
 Comments:
 <p>
-  <% @post.comments.all.each do |comment| %>
+  <% @post.comments.each do |comment| %>
   <%= comment.user.username %> says: <%= comment.content %><br>
   <% end %>
 </p>
 
 Users:
 <p>
-  <% @post.users.all.uniq.each do |user| %>
+  <% @post.users.uniq.each do |user| %>
   <%= link_to user.username, user_path(user) %><br>
   <% end %>
 </p>
